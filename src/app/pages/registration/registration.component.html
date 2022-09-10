@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row  justify-content-center  ">
+      <div class="col-6 ">
+        <div class="card">
+           <h1 >Registration form</h1>
+            <form >
+
+                <mat-form-field class="col-12 px-2" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text">
+                  </mat-form-field>
+
+                  <mat-form-field class="col-12 px-2" appearance="fill">
+                    <mat-label> password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+
+                  <mat-form-field class="col-6 px-2" appearance="fill">
+                    <mat-label>FirstName</mat-label>
+                    <input matInput type="text">
+                  </mat-form-field>
+
+                  <mat-form-field class="col-6 px-2" appearance="fill">
+                    <mat-label>LastName</mat-label>
+                    <input matInput type="text">
+                  </mat-form-field>
+
+                  <mat-form-field class="col-6 px-2" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email">
+                  </mat-form-field>
+
+                  <mat-form-field class="col-6 px-2" appearance="fill">
+                    <mat-label>phone no</mat-label>
+                    <input matInput type="number">
+                  </mat-form-field>
+
+                  <div class="col-12 text-center">
+                    <button mat-raised-button type="submit" class="btn-success">Singup</button>
+                   
+                    <button mat-raised-button type="reset" class="btn-danger">Reset</button>
+
+                  </div>
+            </form>
+         </div>
+      </div>
+    </div>
+</div>
